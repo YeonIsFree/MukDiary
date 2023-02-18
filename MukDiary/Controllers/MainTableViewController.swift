@@ -8,7 +8,15 @@
 import UIKit
 
 class MainTableViewController: UITableViewController {
-
+    
+    let formatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .short
+        f.timeStyle = .short
+        
+        return f
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +33,9 @@ class MainTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
 
         let target = DataManager.shared.diaryList[indexPath.row]
+        
+        cell.textLabel?.text = target.content
+        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
 
         return cell
     }
