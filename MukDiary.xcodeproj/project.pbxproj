@@ -14,6 +14,7 @@
 		8C4F526529A05E6D005B24ED /* MukDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F526329A05E6D005B24ED /* MukDiary.xcdatamodeld */; };
 		8C4F526729A05E6D005B24ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F526629A05E6D005B24ED /* Assets.xcassets */; };
 		8C4F526A29A05E6D005B24ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F526829A05E6D005B24ED /* LaunchScreen.storyboard */; };
+		8C4F527629A088F4005B24ED /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F527529A088F4005B24ED /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8C4F526629A05E6D005B24ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C4F526929A05E6D005B24ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C4F526B29A05E6D005B24ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C4F527529A088F4005B24ED /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,49 @@
 		8C4F525929A05E6D005B24ED /* MukDiary */ = {
 			isa = PBXGroup;
 			children = (
+				8C4F527429A088E4005B24ED /* Data */,
 				8C4F525A29A05E6D005B24ED /* AppDelegate.swift */,
 				8C4F525C29A05E6D005B24ED /* SceneDelegate.swift */,
-				8C4F525E29A05E6D005B24ED /* ViewController.swift */,
-				8C4F526029A05E6D005B24ED /* Main.storyboard */,
+				8C4F527129A063EC005B24ED /* Models */,
+				8C4F527229A063F5005B24ED /* Views */,
+				8C4F527329A063FD005B24ED /* Controllers */,
 				8C4F526629A05E6D005B24ED /* Assets.xcassets */,
 				8C4F526829A05E6D005B24ED /* LaunchScreen.storyboard */,
 				8C4F526B29A05E6D005B24ED /* Info.plist */,
 				8C4F526329A05E6D005B24ED /* MukDiary.xcdatamodeld */,
 			);
 			path = MukDiary;
+			sourceTree = "<group>";
+		};
+		8C4F527129A063EC005B24ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8C4F527229A063F5005B24ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F526029A05E6D005B24ED /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C4F527329A063FD005B24ED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F525E29A05E6D005B24ED /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8C4F527429A088E4005B24ED /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8C4F527529A088F4005B24ED /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C4F525F29A05E6D005B24ED /* ViewController.swift in Sources */,
+				8C4F527629A088F4005B24ED /* DataManager.swift in Sources */,
 				8C4F525B29A05E6D005B24ED /* AppDelegate.swift in Sources */,
 				8C4F525D29A05E6D005B24ED /* SceneDelegate.swift in Sources */,
 				8C4F526529A05E6D005B24ED /* MukDiary.xcdatamodeld in Sources */,
@@ -294,11 +330,14 @@
 				DEVELOPMENT_TEAM = WZ7JVY478C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukDiary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MukDiary;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,11 +361,14 @@
 				DEVELOPMENT_TEAM = WZ7JVY478C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MukDiary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MukDiary;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
