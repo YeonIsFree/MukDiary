@@ -4,5 +4,6 @@
         <attribute name="content" optional="YES" attributeType="String"/>
         <attribute name="insertDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
 </model>
