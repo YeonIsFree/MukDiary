@@ -31,10 +31,16 @@ class DataManager {
             print(error)
         }
     }
-   // ------- 여기서부터! 강의 #19 . 사실 전에 저장 기능 다시 들어야함
-    func addNewDiary(_ diary: String?) {
+   
+    func addNewDiary(diaryTitle: String?, diaryContent: String?) {
         let newDiary = Diary(context: mainContext)
+        newDiary.photo = nil
+        newDiary.title = diaryTitle
+        newDiary.insertDate = Date()
+        newDiary.content = diaryContent
         
+        diaryList.insert(newDiary, at: 0)
+        saveContext()
     }
     
     

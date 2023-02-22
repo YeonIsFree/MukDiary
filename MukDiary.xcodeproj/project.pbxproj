@@ -17,8 +17,9 @@
 		8C4F527829A08F84005B24ED /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F527729A08F84005B24ED /* MainTableViewController.swift */; };
 		8C4F527A29A0A13B005B24ED /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F527929A0A13B005B24ED /* ComposeViewController.swift */; };
 		8C7EFC6F29A334F300128A61 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EFC6E29A334F300128A61 /* DetailViewController.swift */; };
+		8C7EFC7329A3AB6000128A61 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EFC7229A3AB6000128A61 /* CollectionViewController.swift */; };
+		8C99CB3F29A4926F00085E07 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C99CB3E29A4926F00085E07 /* OptionViewController.swift */; };
 		8CC0AC3C29A2EB9D00E0FF74 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC0AC3B29A2EB9D00E0FF74 /* UIViewController+Alert.swift */; };
-		8CC0AC3E29A32C8B00E0FF74 /* temporaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC0AC3D29A32C8B00E0FF74 /* temporaryData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +35,9 @@
 		8C4F527729A08F84005B24ED /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		8C4F527929A0A13B005B24ED /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		8C7EFC6E29A334F300128A61 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8C7EFC7229A3AB6000128A61 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		8C99CB3E29A4926F00085E07 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		8CC0AC3B29A2EB9D00E0FF74 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
-		8CC0AC3D29A32C8B00E0FF74 /* temporaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temporaryData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,16 +70,15 @@
 		8C4F525929A05E6D005B24ED /* MukDiary */ = {
 			isa = PBXGroup;
 			children = (
-				8C4F527429A088E4005B24ED /* Data */,
 				8C4F525A29A05E6D005B24ED /* AppDelegate.swift */,
 				8C4F525C29A05E6D005B24ED /* SceneDelegate.swift */,
+				8C4F527429A088E4005B24ED /* Data */,
 				8C4F527129A063EC005B24ED /* Models */,
 				8C4F527229A063F5005B24ED /* Views */,
 				8C4F527329A063FD005B24ED /* Controllers */,
 				8C4F526629A05E6D005B24ED /* Assets.xcassets */,
 				8C4F526829A05E6D005B24ED /* LaunchScreen.storyboard */,
 				8C4F526B29A05E6D005B24ED /* Info.plist */,
-				8C4F526329A05E6D005B24ED /* MukDiary.xcdatamodeld */,
 			);
 			path = MukDiary;
 			sourceTree = "<group>";
@@ -85,6 +86,7 @@
 		8C4F527129A063EC005B24ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8C4F526329A05E6D005B24ED /* MukDiary.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,6 +105,8 @@
 				8C4F527729A08F84005B24ED /* MainTableViewController.swift */,
 				8C4F527929A0A13B005B24ED /* ComposeViewController.swift */,
 				8C7EFC6E29A334F300128A61 /* DetailViewController.swift */,
+				8C7EFC7229A3AB6000128A61 /* CollectionViewController.swift */,
+				8C99CB3E29A4926F00085E07 /* OptionViewController.swift */,
 				8CC0AC3B29A2EB9D00E0FF74 /* UIViewController+Alert.swift */,
 			);
 			path = Controllers;
@@ -112,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				8C4F527529A088F4005B24ED /* DataManager.swift */,
-				8CC0AC3D29A32C8B00E0FF74 /* temporaryData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -188,11 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7EFC7329A3AB6000128A61 /* CollectionViewController.swift in Sources */,
+				8C99CB3F29A4926F00085E07 /* OptionViewController.swift in Sources */,
 				8C7EFC6F29A334F300128A61 /* DetailViewController.swift in Sources */,
 				8C4F527629A088F4005B24ED /* DataManager.swift in Sources */,
 				8C4F525B29A05E6D005B24ED /* AppDelegate.swift in Sources */,
 				8C4F525D29A05E6D005B24ED /* SceneDelegate.swift in Sources */,
-				8CC0AC3E29A32C8B00E0FF74 /* temporaryData.swift in Sources */,
 				8C4F527A29A0A13B005B24ED /* ComposeViewController.swift in Sources */,
 				8C4F527829A08F84005B24ED /* MainTableViewController.swift in Sources */,
 				8C4F526529A05E6D005B24ED /* MukDiary.xcdatamodeld in Sources */,

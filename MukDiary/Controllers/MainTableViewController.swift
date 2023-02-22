@@ -11,7 +11,7 @@ class MainTableViewController: UITableViewController {
     
     let formatter: DateFormatter = {
         let f = DateFormatter()
-        f.dateStyle = .short
+        f.dateStyle = .long
         f.timeStyle = .short
         
         return f
@@ -19,6 +19,9 @@ class MainTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        DataManager.shared.fetchDiary()
+        tableView.reloadData()
     }
     
     var token: NSObjectProtocol?
@@ -26,6 +29,17 @@ class MainTableViewController: UITableViewController {
     deinit {
         if let token = token {
             NotificationCenter.default.removeObserver(token)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            
+            // 현재 배열의 행을 목적지인 디테일 뷰 컨트롤러의 diary 변수에 넘겨준다.
+            if let vc = segue.destination as? DetailViewController {
+                vc.diary = DataManager.shared.diaryList[indexPath.row]
+            }
         }
     }
     
@@ -42,7 +56,7 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return tmpDataArray.count
+        return DataManager.shared.diaryList.count
 //        return DataManager.shared.diaryList.count
     }
 
@@ -50,19 +64,12 @@ class MainTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
         
-        let target = tmpDataArray[indexPath.row]
+        let target = DataManager.shared.diaryList[indexPath.row]
         
-        cell.textLabel?.text = target.tmpContent
-        cell.detailTextLabel?.text = formatter.string(for: target.tmpDate)
+        cell.textLabel?.text = target.title
+        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
 
         return cell
-
-//        let target = DataManager.shared.diaryList[indexPath.row]
-//
-//        cell.textLabel?.text = target.content
-//        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
-//
-//        return cell
     }
 
     

@@ -29,9 +29,7 @@ class ComposeViewController: UIViewController {
             return
         }
         
-        let newDiary = tmpData(tmpTitle: diaryTitle, tmpContent: diaryContent)
-        
-        tmpDataArray.append(newDiary)
+        DataManager.shared.addNewDiary(diaryTitle: diaryTitle, diaryContent: diaryContent)
         
         NotificationCenter.default.post(name: ComposeViewController.newDiaryDidInsert, object: nil)
         
