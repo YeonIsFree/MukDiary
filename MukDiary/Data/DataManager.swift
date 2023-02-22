@@ -43,6 +43,13 @@ class DataManager {
         saveContext()
     }
     
+    func deleteDiary(_ diary: Diary?) {
+        if let diary = diary {
+            mainContext.delete(diary)
+            saveContext()
+        }
+    }
+    
     
 
     // MARK: - Core Data stack

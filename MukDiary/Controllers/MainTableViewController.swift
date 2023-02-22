@@ -66,8 +66,11 @@ class MainTableViewController: UITableViewController {
         
         let target = DataManager.shared.diaryList[indexPath.row]
         
-        cell.textLabel?.text = target.title
-        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
+        var content = cell.defaultContentConfiguration()
+        content.text = target.title
+        content.secondaryText = formatter.string(for: target.insertDate)
+
+        cell.contentConfiguration = content
 
         return cell
     }
