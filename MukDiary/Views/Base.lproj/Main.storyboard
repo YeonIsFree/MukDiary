@@ -318,11 +318,14 @@
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="EJd-Yg-zbd" id="gr8-Zy-gA8"/>
-                            <outlet property="delegate" destination="EJd-Yg-zbd" id="XkX-9Q-DPG"/>
+                            <outlet property="dataSource" destination="EJd-Yg-zbd" id="55I-sP-2Df"/>
+                            <outlet property="delegate" destination="EJd-Yg-zbd" id="TWI-Er-kLL"/>
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Collection" image="square.grid.3x3" catalog="system" id="XsZ-8j-OXz"/>
+                    <connections>
+                        <outlet property="collectionViewLayout" destination="6ko-DN-o5b" id="y8F-6V-jzG"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvy-db-UX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

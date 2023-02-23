@@ -15,13 +15,13 @@ class OptionViewController: UITableViewController {
     
     // MARK: - Dark Mode
     
-    lazy var modeSwitch: UISwitch = {
-        var onClickSwitch = UISwitch()
-        onClickSwitch.addTarget(self, action: #selector(onClickModeSwitch), for: .touchUpInside)
-        return onClickSwitch
+    var darkModeSwitch: UISwitch = {
+        var modeSwitch = UISwitch()
+        modeSwitch.addTarget(self, action: #selector(modeSwitchTapped), for: .touchUpInside)
+        return modeSwitch
     }()
 
-    @objc func onClickModeSwitch(_ sender: UISwitch) {
+    @objc func modeSwitchTapped(_ sender: UISwitch) {
         let appDelegate = UIApplication.shared.windows.first
         if sender.isOn {
             appDelegate?.overrideUserInterfaceStyle = .dark
@@ -58,7 +58,7 @@ class OptionViewController: UITableViewController {
             content.image = UIImage(systemName: "moon")
             content.text = "다크 모드"
         
-            cell.accessoryView = modeSwitch
+            cell.accessoryView = darkModeSwitch
             
             cell.contentConfiguration = content
             
