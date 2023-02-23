@@ -11,14 +11,25 @@ class OptionViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    // MARK: - Dark Mode
+    
+    lazy var modeSwitch: UISwitch = {
+        var onClickSwitch = UISwitch()
+        onClickSwitch.addTarget(self, action: #selector(onClickModeSwitch), for: .touchUpInside)
+        return onClickSwitch
+    }()
 
+    @objc func onClickModeSwitch(_ sender: UISwitch) {
+        let appDelegate = UIApplication.shared.windows.first
+        if sender.isOn {
+            appDelegate?.overrideUserInterfaceStyle = .dark
+        } else {
+            appDelegate?.overrideUserInterfaceStyle = .light
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +57,11 @@ class OptionViewController: UITableViewController {
             var content = cell.defaultContentConfiguration()
             content.image = UIImage(systemName: "moon")
             content.text = "다크 모드"
+        
+            cell.accessoryView = modeSwitch
+            
             cell.contentConfiguration = content
+            
             return cell
         default:
             fatalError()
