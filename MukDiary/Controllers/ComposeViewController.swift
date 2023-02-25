@@ -7,10 +7,12 @@
 
 import UIKit
 
-class ComposeViewController: UIViewController {
+class ComposeViewController: UIViewController, UINavigationControllerDelegate {
     
     var editTarget: Diary?
-
+    
+    @IBOutlet weak var photoView: UIImageView!
+    
     @IBOutlet weak var titleTextView: UITextView!
     
     @IBOutlet weak var contentTextView: UITextView!
@@ -20,9 +22,14 @@ class ComposeViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
+    
         guard let diaryTitle = titleTextView.text, diaryTitle.count > 0 else {
             alert(message: "제목을 입력하세요")
+            return
+        }
+        
+        guard let diaryPhoto = photoView.image?.jpegData(compressionQuality: 1.0) else {
+            alert(message: "사진을 선택하세요")
             return
         }
         
@@ -30,28 +37,28 @@ class ComposeViewController: UIViewController {
             alert(message: "내용을 입력하세요")
             return
         }
-            // 일기 편집 모드
+        
+        // 기존 일기 편집 모드
         if let target = editTarget {
             target.title = diaryTitle
+            target.photo = diaryPhoto
             target.content = diaryContent
             
             DataManager.shared.saveContext()
             NotificationCenter.default.post(name: ComposeViewController.diaryDidChanged, object: nil)
         } else { // 새 일기 쓰기 모드
-            DataManager.shared.addNewDiary(diaryTitle: diaryTitle, diaryContent: diaryContent)
+            DataManager.shared.addNewDiary(diaryPhoto: diaryPhoto, diaryTitle: diaryTitle, diaryContent: diaryContent)
             NotificationCenter.default.post(name: ComposeViewController.newDiaryDidInsert, object: nil)
         }
-        
-        
-        
         
         dismiss(animated: true)
         
     }
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         if let diary = editTarget {
             navigationItem.title = "일기 편집"
@@ -69,4 +76,30 @@ class ComposeViewController: UIViewController {
 extension ComposeViewController {
     static let newDiaryDidInsert = Notification.Name(rawValue: "newDiaryDidInsert")
     static let diaryDidChanged = Notification.Name(rawValue: "diaryDidChanged")
+}
+
+// MARK: - 사진 업로드
+extension ComposeViewController: UIImagePickerControllerDelegate {
+    
+    @IBAction func pickButtonTapped(_ sender: UIButton) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        
+        picker.delegate = self
+        
+        self.present(picker, animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            picker.dismiss(animated: false) { () in
+                let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+                self.photoView.image = img
+            }
+        }
+    
 }

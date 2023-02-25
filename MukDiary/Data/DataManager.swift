@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class DataManager {
     static let shared = DataManager()
@@ -32,9 +33,9 @@ class DataManager {
         }
     }
    
-    func addNewDiary(diaryTitle: String?, diaryContent: String?) {
+    func addNewDiary(diaryPhoto: Data?, diaryTitle: String?, diaryContent: String?) {
         let newDiary = Diary(context: mainContext)
-        newDiary.photo = nil
+        newDiary.photo = diaryPhoto
         newDiary.title = diaryTitle
         newDiary.insertDate = Date()
         newDiary.content = diaryContent

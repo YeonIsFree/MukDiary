@@ -35,8 +35,6 @@ class MainTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
-            
-            // 현재 배열의 행을 목적지인 디테일 뷰 컨트롤러의 diary 변수에 넘겨준다.
             if let vc = segue.destination as? DetailViewController {
                 vc.diary = DataManager.shared.diaryList[indexPath.row]
             }
@@ -69,7 +67,6 @@ class MainTableViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         content.text = target.title
         content.secondaryText = formatter.string(for: target.insertDate)
-
         cell.contentConfiguration = content
 
         return cell
