@@ -20,6 +20,7 @@
 		8C7EFC7329A3AB6000128A61 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EFC7229A3AB6000128A61 /* CollectionViewController.swift */; };
 		8C99CB3F29A4926F00085E07 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C99CB3E29A4926F00085E07 /* OptionViewController.swift */; };
 		8CC0AC3C29A2EB9D00E0FF74 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC0AC3B29A2EB9D00E0FF74 /* UIViewController+Alert.swift */; };
+		8CDD651129AB274D00F7A9FD /* photoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDD651029AB274D00F7A9FD /* photoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8C7EFC7229A3AB6000128A61 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		8C99CB3E29A4926F00085E07 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		8CC0AC3B29A2EB9D00E0FF74 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		8CDD651029AB274D00F7A9FD /* photoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				8C4F526029A05E6D005B24ED /* Main.storyboard */,
+				8CDD651029AB274D00F7A9FD /* photoTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				8C4F527629A088F4005B24ED /* DataManager.swift in Sources */,
 				8C4F525B29A05E6D005B24ED /* AppDelegate.swift in Sources */,
 				8C4F525D29A05E6D005B24ED /* SceneDelegate.swift in Sources */,
+				8CDD651129AB274D00F7A9FD /* photoTableViewCell.swift in Sources */,
 				8C4F527A29A0A13B005B24ED /* ComposeViewController.swift in Sources */,
 				8C4F527829A08F84005B24ED /* MainTableViewController.swift in Sources */,
 				8C4F526529A05E6D005B24ED /* MukDiary.xcdatamodeld in Sources */,

@@ -82,10 +82,10 @@ extension DetailViewController: UITableViewDataSource {
 //            cell.contentConfiguration = content
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! photoTableViewCell
             
             if let img = diary?.photo {
-                cell.imageView?.image = UIImage(data: img)
+                cell.photoImageView.image = UIImage(data: img)
             }
 //            var content = cell.defaultContentConfiguration()
 //            let img = diary?.photo
