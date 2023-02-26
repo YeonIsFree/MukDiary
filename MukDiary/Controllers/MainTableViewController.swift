@@ -68,6 +68,8 @@ class MainTableViewController: UITableViewController {
         content.text = target.title
         content.secondaryText = formatter.string(for: target.insertDate)
         cell.contentConfiguration = content
+        
+        
 
         return cell
     }
