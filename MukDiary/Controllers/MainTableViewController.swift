@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UITextView_Placeholder
 
 class MainTableViewController: UITableViewController {
     
@@ -64,13 +65,9 @@ class MainTableViewController: UITableViewController {
         
         let target = DataManager.shared.diaryList[indexPath.row]
         
-        var content = cell.defaultContentConfiguration()
-        content.text = target.title
-        content.secondaryText = formatter.string(for: target.insertDate)
-        cell.contentConfiguration = content
+        cell.textLabel?.text = target.title
+        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
         
-        
-
         return cell
     }
 

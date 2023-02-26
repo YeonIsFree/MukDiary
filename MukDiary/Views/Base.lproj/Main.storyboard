@@ -111,32 +111,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="contentCell" textLabel="JD8-j3-yA6" style="IBUITableViewCellStyleDefault" id="Rjc-Mp-MVg">
-                                        <rect key="frame" x="0.0" y="120" width="393" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rjc-Mp-MVg" id="CQH-ME-aEg">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Content" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JD8-j3-yA6">
-                                                    <rect key="frame" x="20" y="0.0" width="353" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="350" translatesAutoresizingMaskIntoConstraints="NO" id="DOu-mC-zr6" customClass="photoTableViewCell" customModule="MukDiary" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="164" width="393" height="350"/>
+                                    <tableViewCell contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="350" translatesAutoresizingMaskIntoConstraints="NO" id="DOu-mC-zr6" customClass="PhotoTableViewCell" customModule="MukDiary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="393" height="350"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DOu-mC-zr6" id="Jhj-Ca-nCb">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wp2-VR-ruH">
-                                                    <rect key="frame" x="47" y="11" width="300" height="328"/>
+                                                    <rect key="frame" x="46.666666666666657" y="11" width="300" height="328"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="300" id="A65-9a-UPz"/>
                                                         <constraint firstAttribute="width" constant="300" id="GyM-wF-Tnv"/>
@@ -153,6 +136,23 @@
                                         <connections>
                                             <outlet property="photoImageView" destination="wp2-VR-ruH" id="rv7-Gt-4hg"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="contentCell" textLabel="JD8-j3-yA6" style="IBUITableViewCellStyleDefault" id="Rjc-Mp-MVg">
+                                        <rect key="frame" x="0.0" y="470" width="393" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rjc-Mp-MVg" id="CQH-ME-aEg">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Content" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JD8-j3-yA6">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1p-6a-sbt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812.9770992366412" y="150"/>
+            <point key="canvasLocation" x="3664.8854961832058" y="150"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="3ta-pG-jus">
@@ -196,14 +196,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XxV-Nb-Tcn">
-                                <rect key="frame" x="96.666666666666686" y="56" width="200" height="200"/>
+                                <rect key="frame" x="46.666666666666657" y="56" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="C0F-29-ujd"/>
-                                    <constraint firstAttribute="width" constant="200" id="ha8-PG-h62"/>
+                                    <constraint firstAttribute="height" constant="300" id="C0F-29-ujd"/>
+                                    <constraint firstAttribute="width" constant="300" id="ha8-PG-h62"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ecq-Mv-yQe">
-                                <rect key="frame" x="20" y="261" width="353" height="50"/>
+                                <rect key="frame" x="20" y="361" width="353" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiP-bE-vCa">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="20"/>
@@ -214,7 +214,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="제목을 입력하세요. 근데 너무 길게는 말구." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Ok-z5-cQ0">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Ok-z5-cQ0">
                                         <rect key="frame" x="0.0" y="20" width="353" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -227,7 +227,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ost-wx-AIC">
-                                <rect key="frame" x="20" y="326" width="353" height="455.33333333333326"/>
+                                <rect key="frame" x="20" y="426" width="353" height="455.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAs-YA-nGs">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
@@ -235,7 +235,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="내용을 입력하세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vI4-F6-hEk">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vI4-F6-hEk">
                                         <rect key="frame" x="0.0" y="20.333333333333314" width="353" height="435"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -248,7 +248,7 @@
                                 </subviews>
                             </stackView>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMA-pO-Am6">
-                                <rect key="frame" x="171.66666666666666" y="131" width="50" height="50"/>
+                                <rect key="frame" x="171.66666666666666" y="181" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="egq-AK-iNF"/>
                                     <constraint firstAttribute="height" constant="50" id="taZ-gN-aEQ"/>
@@ -316,6 +316,55 @@
             </objects>
             <point key="canvasLocation" x="-121.37404580152672" y="-28.169014084507044"/>
         </scene>
+        <!--모아보기-->
+        <scene sceneID="0ib-KJ-e7M">
+            <objects>
+                <collectionViewController id="lft-KT-BFv" customClass="CollectionViewController" customModule="MukDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mlV-ei-r7L">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="V7Z-6Q-jgt">
+                            <size key="itemSize" width="130" height="130"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="vSJ-z3-wIh" customClass="PhotoCollectionViewCell" customModule="MukDiary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TWb-gE-Gfh">
+                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gh3-Ew-6dw">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Gh3-Ew-6dw" firstAttribute="top" secondItem="TWb-gE-Gfh" secondAttribute="top" id="7Vl-9b-HcD"/>
+                                        <constraint firstItem="Gh3-Ew-6dw" firstAttribute="leading" secondItem="TWb-gE-Gfh" secondAttribute="leading" id="Bvb-az-B6F"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gh3-Ew-6dw" secondAttribute="trailing" id="Jmm-hh-rWY"/>
+                                        <constraint firstAttribute="bottom" secondItem="Gh3-Ew-6dw" secondAttribute="bottom" id="xIo-Vq-HoF"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="collectionImageView" destination="Gh3-Ew-6dw" id="7H4-RY-dfp"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="lft-KT-BFv" id="PAR-0e-MYD"/>
+                            <outlet property="delegate" destination="lft-KT-BFv" id="d5G-gX-HZa"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="모아보기" id="wPl-9S-sK2"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j23-jH-e8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.70992366412213" y="714.78873239436621"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mZP-ne-zQt">
             <objects>
@@ -328,51 +377,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="PxR-0V-eln" kind="relationship" relationship="viewControllers" id="Zdt-LF-vja"/>
-                        <segue destination="EJd-Yg-zbd" kind="relationship" relationship="viewControllers" id="VeX-wd-2O8"/>
+                        <segue destination="ZaG-dc-nz9" kind="relationship" relationship="viewControllers" id="OXa-Vu-KqT"/>
                         <segue destination="8Gh-lN-MVL" kind="relationship" relationship="viewControllers" id="mDo-xF-b7v"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHQ-BJ-lLg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1048.0916030534352" y="-28.169014084507044"/>
-        </scene>
-        <!--Collection-->
-        <scene sceneID="dBX-AC-TWs">
-            <objects>
-                <collectionViewController id="EJd-Yg-zbd" customClass="CollectionViewController" customModule="MukDiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="6ko-DN-o5b">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kLH-EW-mkT">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Sjv-yS-jEy">
-                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="g5i-cz-xTE">
-                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="EJd-Yg-zbd" id="55I-sP-2Df"/>
-                            <outlet property="delegate" destination="EJd-Yg-zbd" id="TWI-Er-kLL"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="Collection" image="square.grid.3x3" catalog="system" id="XsZ-8j-OXz"/>
-                    <connections>
-                        <outlet property="collectionViewLayout" destination="6ko-DN-o5b" id="y8F-6V-jzG"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wvy-db-UX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-100" y="721"/>
         </scene>
         <!--설정-->
         <scene sceneID="2PO-7J-VkF">
@@ -496,17 +507,36 @@
             </objects>
             <point key="canvasLocation" x="1812.9770992366412" y="-546.47887323943667"/>
         </scene>
+        <!--Collection-->
+        <scene sceneID="4Ty-NL-MsB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZaG-dc-nz9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Collection" image="circle.grid.3x3" catalog="system" id="hcM-zu-DIa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UrQ-CB-MMG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lft-KT-BFv" kind="relationship" relationship="rootViewController" id="ahs-1d-eno"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O6a-3a-FEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129.00763358778624" y="714.78873239436621"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Ioa-Tn-LLe"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="circle.grid.3x3" catalog="system" width="128" height="110"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="moon" catalog="system" width="128" height="123"/>
         <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="person" catalog="system" width="128" height="121"/>
-        <image name="square.grid.3x3" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

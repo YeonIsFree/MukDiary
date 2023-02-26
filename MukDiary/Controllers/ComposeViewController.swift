@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UITextView_Placeholder
 
 class ComposeViewController: UIViewController, UINavigationControllerDelegate {
     
@@ -47,6 +48,7 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
             DataManager.shared.saveContext()
             NotificationCenter.default.post(name: ComposeViewController.diaryDidChanged, object: nil)
         } else { // 새 일기 쓰기 모드
+            
             DataManager.shared.addNewDiary(diaryPhoto: diaryPhoto, diaryTitle: diaryTitle, diaryContent: diaryContent)
             NotificationCenter.default.post(name: ComposeViewController.newDiaryDidInsert, object: nil)
         }
@@ -58,17 +60,18 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         if let diary = editTarget {
             navigationItem.title = "일기 편집"
             titleTextView.text = diary.title
             contentTextView.text = diary.content
         } else {
             navigationItem.title = "새 일기"
+            titleTextView.placeholder = "일기의 제목을 입력해주세요!"
+            contentTextView.placeholder = "누구와 무엇을 먹었나요? :)"
             titleTextView.text = ""
             contentTextView.text = ""
         }
+        
     }
 
 }

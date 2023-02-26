@@ -70,34 +70,22 @@ extension DetailViewController: UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath)
             cell.textLabel?.text = diary?.title
-//            var content = cell.defaultContentConfiguration()
-//            content.text = diary?.title
-//            cell.contentConfiguration = content
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "dateCell", for: indexPath)
             cell.textLabel?.text = formatter.string(for: diary?.insertDate)
-//            var content = cell.defaultContentConfiguration()
-//            content.text = formatter.string(for: diary?.insertDate)
-//            cell.contentConfiguration = content
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! photoTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoTableViewCell
             
             if let img = diary?.photo {
                 cell.photoImageView.image = UIImage(data: img)
             }
-//            var content = cell.defaultContentConfiguration()
-//            let img = diary?.photo
-//            content.image = UIImage(data: img!)
-//            cell.contentConfiguration = content
+            
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: "contentCell", for: indexPath)
             cell.textLabel?.text = diary?.content
-//            var content = cell.defaultContentConfiguration()
-//            content.text = diary?.content
-//            cell.contentConfiguration = content
             return cell
         default:
             fatalError()

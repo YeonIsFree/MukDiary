@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11BC644AB8BCEB6C82B10F03 /* Pods_MukDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453135A887AC62050ED8608E /* Pods_MukDiary.framework */; };
+		8C2103A229AB456B005D4702 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2103A129AB456B005D4702 /* PhotoCollectionViewCell.swift */; };
+		8C2103A429AB4AA5005D4702 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2103A329AB4AA5005D4702 /* CollectionViewController.swift */; };
 		8C4F525B29A05E6D005B24ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F525A29A05E6D005B24ED /* AppDelegate.swift */; };
 		8C4F525D29A05E6D005B24ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F525C29A05E6D005B24ED /* SceneDelegate.swift */; };
 		8C4F526229A05E6D005B24ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4F526029A05E6D005B24ED /* Main.storyboard */; };
@@ -17,13 +20,15 @@
 		8C4F527829A08F84005B24ED /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F527729A08F84005B24ED /* MainTableViewController.swift */; };
 		8C4F527A29A0A13B005B24ED /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4F527929A0A13B005B24ED /* ComposeViewController.swift */; };
 		8C7EFC6F29A334F300128A61 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EFC6E29A334F300128A61 /* DetailViewController.swift */; };
-		8C7EFC7329A3AB6000128A61 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7EFC7229A3AB6000128A61 /* CollectionViewController.swift */; };
 		8C99CB3F29A4926F00085E07 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C99CB3E29A4926F00085E07 /* OptionViewController.swift */; };
 		8CC0AC3C29A2EB9D00E0FF74 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC0AC3B29A2EB9D00E0FF74 /* UIViewController+Alert.swift */; };
-		8CDD651129AB274D00F7A9FD /* photoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDD651029AB274D00F7A9FD /* photoTableViewCell.swift */; };
+		8CDD651129AB274D00F7A9FD /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDD651029AB274D00F7A9FD /* PhotoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		453135A887AC62050ED8608E /* Pods_MukDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MukDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2103A129AB456B005D4702 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		8C2103A329AB4AA5005D4702 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		8C4F525729A05E6D005B24ED /* MukDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MukDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4F525A29A05E6D005B24ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C4F525C29A05E6D005B24ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,10 +41,11 @@
 		8C4F527729A08F84005B24ED /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		8C4F527929A0A13B005B24ED /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		8C7EFC6E29A334F300128A61 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		8C7EFC7229A3AB6000128A61 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		8C99CB3E29A4926F00085E07 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		8CC0AC3B29A2EB9D00E0FF74 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
-		8CDD651029AB274D00F7A9FD /* photoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoTableViewCell.swift; sourceTree = "<group>"; };
+		8CDD651029AB274D00F7A9FD /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		9362B115EC6447989038ECFD /* Pods-MukDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MukDiary.release.xcconfig"; path = "Target Support Files/Pods-MukDiary/Pods-MukDiary.release.xcconfig"; sourceTree = "<group>"; };
+		DFAE7D090BEFF34B28C79E04 /* Pods-MukDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MukDiary.debug.xcconfig"; path = "Target Support Files/Pods-MukDiary/Pods-MukDiary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +53,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11BC644AB8BCEB6C82B10F03 /* Pods_MukDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37F8E75BCC5D6E633DDDA9C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				453135A887AC62050ED8608E /* Pods_MukDiary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8C4F524E29A05E6D005B24ED = {
 			isa = PBXGroup;
 			children = (
 				8C4F525929A05E6D005B24ED /* MukDiary */,
 				8C4F525829A05E6D005B24ED /* Products */,
+				CD3A8943A42DFB047CA8600B /* Pods */,
+				37F8E75BCC5D6E633DDDA9C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,7 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				8C4F526029A05E6D005B24ED /* Main.storyboard */,
-				8CDD651029AB274D00F7A9FD /* photoTableViewCell.swift */,
+				8CDD651029AB274D00F7A9FD /* PhotoTableViewCell.swift */,
+				8C2103A129AB456B005D4702 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,8 +126,8 @@
 				8C4F527729A08F84005B24ED /* MainTableViewController.swift */,
 				8C4F527929A0A13B005B24ED /* ComposeViewController.swift */,
 				8C7EFC6E29A334F300128A61 /* DetailViewController.swift */,
-				8C7EFC7229A3AB6000128A61 /* CollectionViewController.swift */,
 				8C99CB3E29A4926F00085E07 /* OptionViewController.swift */,
+				8C2103A329AB4AA5005D4702 /* CollectionViewController.swift */,
 				8CC0AC3B29A2EB9D00E0FF74 /* UIViewController+Alert.swift */,
 			);
 			path = Controllers;
@@ -123,6 +141,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		CD3A8943A42DFB047CA8600B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFAE7D090BEFF34B28C79E04 /* Pods-MukDiary.debug.xcconfig */,
+				9362B115EC6447989038ECFD /* Pods-MukDiary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C4F526E29A05E6D005B24ED /* Build configuration list for PBXNativeTarget "MukDiary" */;
 			buildPhases = (
+				0522334647DC47E7AEAFCA27 /* [CP] Check Pods Manifest.lock */,
 				8C4F525329A05E6D005B24ED /* Sources */,
 				8C4F525429A05E6D005B24ED /* Frameworks */,
 				8C4F525529A05E6D005B24ED /* Resources */,
+				F387645D6BCD829449DDFAD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,18 +218,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0522334647DC47E7AEAFCA27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MukDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F387645D6BCD829449DDFAD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MukDiary/Pods-MukDiary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MukDiary/Pods-MukDiary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MukDiary/Pods-MukDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8C4F525329A05E6D005B24ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C7EFC7329A3AB6000128A61 /* CollectionViewController.swift in Sources */,
+				8C2103A429AB4AA5005D4702 /* CollectionViewController.swift in Sources */,
 				8C99CB3F29A4926F00085E07 /* OptionViewController.swift in Sources */,
 				8C7EFC6F29A334F300128A61 /* DetailViewController.swift in Sources */,
 				8C4F527629A088F4005B24ED /* DataManager.swift in Sources */,
 				8C4F525B29A05E6D005B24ED /* AppDelegate.swift in Sources */,
+				8C2103A229AB456B005D4702 /* PhotoCollectionViewCell.swift in Sources */,
 				8C4F525D29A05E6D005B24ED /* SceneDelegate.swift in Sources */,
-				8CDD651129AB274D00F7A9FD /* photoTableViewCell.swift in Sources */,
+				8CDD651129AB274D00F7A9FD /* PhotoTableViewCell.swift in Sources */,
 				8C4F527A29A0A13B005B24ED /* ComposeViewController.swift in Sources */,
 				8C4F527829A08F84005B24ED /* MainTableViewController.swift in Sources */,
 				8C4F526529A05E6D005B24ED /* MukDiary.xcdatamodeld in Sources */,
@@ -346,6 +418,7 @@
 		};
 		8C4F526F29A05E6D005B24ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFAE7D090BEFF34B28C79E04 /* Pods-MukDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -377,6 +450,7 @@
 		};
 		8C4F527029A05E6D005B24ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9362B115EC6447989038ECFD /* Pods-MukDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
