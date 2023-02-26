@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1p-6a-sbt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3664.8854961832058" y="150"/>
+            <point key="canvasLocation" x="2534" y="417"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="3ta-pG-jus">
@@ -351,6 +351,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="collectionImageView" destination="Gh3-Ew-6dw" id="7H4-RY-dfp"/>
+                                    <segue destination="wjK-YW-2G6" kind="show" identifier="detailViewSegue" id="rw3-dW-8og"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -529,6 +530,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Ioa-Tn-LLe"/>
+        <segue reference="rw3-dW-8og"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.grid.3x3" catalog="system" width="128" height="110"/>
