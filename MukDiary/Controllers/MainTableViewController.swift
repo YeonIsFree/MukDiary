@@ -48,7 +48,8 @@ class MainTableViewController: UITableViewController {
         token = NotificationCenter.default.addObserver(forName: ComposeViewController.newDiaryDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in
             self?.tableView.reloadData()
         }
-
+        
+        OptionViewController().checkSwitchState()
     }
 
     // MARK: - Table view data source

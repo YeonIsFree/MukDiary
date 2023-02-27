@@ -9,15 +9,19 @@ import UIKit
 
 class OptionViewController: UITableViewController {
     
+    let userDefaults = UserDefaults.standard
+    let onOffKey = "onOffKey"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkSwitchState()
     }
     
     // MARK: - Dark Mode
     
     var darkModeSwitch: UISwitch = {
         var modeSwitch = UISwitch()
-        modeSwitch.addTarget(self, action: #selector(modeSwitchTapped), for: .touchUpInside)
+        modeSwitch.addTarget(nil, action: #selector(modeSwitchTapped), for: .touchUpInside)
         return modeSwitch
     }()
 
@@ -25,7 +29,21 @@ class OptionViewController: UITableViewController {
         let appDelegate = UIApplication.shared.windows.first
         if sender.isOn {
             appDelegate?.overrideUserInterfaceStyle = .dark
+            userDefaults.set(true, forKey: onOffKey)
+            
         } else {
+            appDelegate?.overrideUserInterfaceStyle = .light
+            userDefaults.set(false, forKey: onOffKey)
+        }
+    }
+    
+    func checkSwitchState() {
+        let appDelegate = UIApplication.shared.windows.first
+        if(userDefaults.bool(forKey: onOffKey)) {
+            darkModeSwitch.setOn(true, animated: false)
+            appDelegate?.overrideUserInterfaceStyle = .dark
+        } else {
+            darkModeSwitch.setOn(false, animated: false)
             appDelegate?.overrideUserInterfaceStyle = .light
         }
     }
@@ -40,43 +58,27 @@ class OptionViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "versionCell", for: indexPath)
-            var content = cell.defaultContentConfiguration()
-            content.image = UIImage(systemName: "gearshape")
-            content.text = "버전 정보"
-            cell.contentConfiguration = content
+            cell.textLabel?.text = "버전 정보"
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "devCell", for: indexPath)
-            var content = cell.defaultContentConfiguration()
-            content.image = UIImage(systemName: "person")
-            content.text = "개발자 정보"
-            cell.contentConfiguration = content
+            cell.textLabel?.text = "개발자 정보"
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "darkModeCell", for: indexPath)
-            var content = cell.defaultContentConfiguration()
-            content.image = UIImage(systemName: "moon")
-            content.text = "다크 모드"
-        
+            cell.textLabel?.text = "다크 모드"
             cell.accessoryView = darkModeSwitch
-            
-            cell.contentConfiguration = content
-            
             return cell
         default:
             fatalError()
         }
-        
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            devAlert(message: "Yeon \n seryun91@naver.com")
+        }
     }
-    */
+    
 
 }

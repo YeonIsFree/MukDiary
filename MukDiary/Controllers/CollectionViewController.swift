@@ -9,23 +9,12 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-//        if segue.identifier == "mySegue"
-//        {
-//            let viewController = segue.destination as! AnimalsViewController1
-//            print("In \(#function), valueToPass = \(valueToPass)")
-//            viewController.dataLabelObject = valueToPass
-//        }
-//    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.collectionView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let cell = sender as? UICollectionViewCell, let indexPath = collectionView.indexPath(for: cell) {
             if let vc = segue.destination as? DetailViewController {
                 vc.diary = DataManager.shared.diaryList[indexPath.row]
@@ -56,14 +45,5 @@ class CollectionViewController: UICollectionViewController {
     
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-//
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "detailViewSegue", sender: self)
-//
-//    }
-    
-
 
 }

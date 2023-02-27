@@ -126,8 +126,8 @@
 				8C4F527729A08F84005B24ED /* MainTableViewController.swift */,
 				8C4F527929A0A13B005B24ED /* ComposeViewController.swift */,
 				8C7EFC6E29A334F300128A61 /* DetailViewController.swift */,
-				8C99CB3E29A4926F00085E07 /* OptionViewController.swift */,
 				8C2103A329AB4AA5005D4702 /* CollectionViewController.swift */,
+				8C99CB3E29A4926F00085E07 /* OptionViewController.swift */,
 				8CC0AC3B29A2EB9D00E0FF74 /* UIViewController+Alert.swift */,
 			);
 			path = Controllers;
