@@ -67,6 +67,7 @@ class MainTableViewController: UITableViewController {
         let target = DataManager.shared.diaryList[indexPath.row]
         
         cell.textLabel?.text = target.title
+        cell.textLabel?.textColor = UIColor(named: "MukLabelColor")
         cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
         
         return cell

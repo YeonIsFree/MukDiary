@@ -36,14 +36,11 @@ class CollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! PhotoCollectionViewCell
-        
         let img = DataManager.shared.diaryList[indexPath.row].photo
-        
         if let diaryPhoto = img {
             cell.collectionImageView.image = UIImage(data: diaryPhoto)
         }
-    
         return cell
     }
-
+    
 }

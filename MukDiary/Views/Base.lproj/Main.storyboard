@@ -4,20 +4,21 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--먹다이어리-->
+        <!--Muk Diary-->
         <scene sceneID="QbD-g8-aqc">
             <objects>
                 <tableViewController id="V0P-4a-kWp" customClass="MainTableViewController" customModule="MukDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KTp-ZB-HBS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MukBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mainCell" textLabel="SIU-17-AyU" detailTextLabel="qfb-cR-ClY" style="IBUITableViewCellStyleSubtitle" id="sNY-9o-H9v">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -30,7 +31,7 @@
                                             <rect key="frame" x="20" y="6.0000000000000009" width="27" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="0.0"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.23137254900000001" green="0.19215686269999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qfb-cR-ClY">
@@ -42,6 +43,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="MukBackgroundColor"/>
                                 <connections>
                                     <segue destination="wjK-YW-2G6" kind="show" id="Xa5-bO-iAh"/>
                                 </connections>
@@ -52,8 +54,9 @@
                             <outlet property="delegate" destination="V0P-4a-kWp" id="x0O-up-QJQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="먹다이어리" id="P23-K7-l9O">
-                        <barButtonItem key="rightBarButtonItem" image="pencil.line" catalog="system" id="aRI-bg-hxf">
+                    <navigationItem key="navigationItem" title="Muk Diary" id="P23-K7-l9O">
+                        <barButtonItem key="rightBarButtonItem" image="pencil" catalog="system" id="aRI-bg-hxf">
+                            <color key="tintColor" name="MukLabelColor"/>
                             <connections>
                                 <segue destination="hIF-3C-WEe" kind="presentation" id="2ew-7n-xhe"/>
                             </connections>
@@ -75,7 +78,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nHc-FK-N1h">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="MukBackgroundColor"/>
+                                <color key="tintColor" name="MukLabelColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="titleCell" textLabel="m5g-m5-WXr" style="IBUITableViewCellStyleDefault" id="pUl-m2-goY">
                                         <rect key="frame" x="0.0" y="50" width="393" height="44"/>
@@ -93,6 +97,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="MukBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="dateCell" textLabel="g7i-Ty-82q" rowHeight="26" style="IBUITableViewCellStyleDefault" id="PJW-v8-afu">
                                         <rect key="frame" x="0.0" y="94" width="393" height="26"/>
@@ -110,8 +115,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="MukBackgroundColor"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="redraw" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="350" translatesAutoresizingMaskIntoConstraints="NO" id="DOu-mC-zr6" customClass="PhotoTableViewCell" customModule="MukDiary" customModuleProvider="target">
+                                    <tableViewCell contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="350" translatesAutoresizingMaskIntoConstraints="NO" id="DOu-mC-zr6" customClass="PhotoTableViewCell" customModule="MukDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="393" height="350"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DOu-mC-zr6" id="Jhj-Ca-nCb">
@@ -133,6 +139,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="wp2-VR-ruH" secondAttribute="bottom" id="q2H-kf-aQn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="MukBackgroundColor"/>
                                         <connections>
                                             <outlet property="photoImageView" destination="wp2-VR-ruH" id="rv7-Gt-4hg"/>
                                         </connections>
@@ -153,6 +160,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="MukBackgroundColor"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -166,12 +174,14 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="VNB-gI-09d">
                         <rightBarButtonItems>
-                            <barButtonItem image="pencil.line" catalog="system" style="plain" id="7mG-ip-YoM">
+                            <barButtonItem image="pencil" catalog="system" id="7mG-ip-YoM">
+                                <color key="tintColor" name="MukLabelColor"/>
                                 <connections>
                                     <segue destination="hIF-3C-WEe" kind="presentation" id="Ioa-Tn-LLe"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem style="plain" systemItem="trash" id="QxW-um-czq">
+                            <barButtonItem systemItem="trash" id="QxW-um-czq">
+                                <color key="tintColor" name="MukLabelColor"/>
                                 <connections>
                                     <action selector="removeButtonTapped:" destination="wjK-YW-2G6" id="dgg-vI-XNk"/>
                                 </connections>
@@ -212,16 +222,16 @@
                                             <constraint firstAttribute="height" constant="20" id="GuJ-P0-M2m"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="MukLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Ok-z5-cQ0">
                                         <rect key="frame" x="0.0" y="20" width="353" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="MukBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="afk-2a-4kz"/>
                                         </constraints>
-                                        <color key="textColor" systemColor="labelColor"/>
+                                        <color key="textColor" name="MukLabelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -233,16 +243,16 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAs-YA-nGs">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="MukLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vI4-F6-hEk">
                                         <rect key="frame" x="0.0" y="20.333333333333314" width="353" height="435"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="MukBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="435" id="T4o-jE-VXB"/>
                                         </constraints>
-                                        <color key="textColor" systemColor="labelColor"/>
+                                        <color key="textColor" name="MukLabelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -264,7 +274,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zC7-75-abI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MukBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ecq-Mv-yQe" firstAttribute="leading" secondItem="zC7-75-abI" secondAttribute="leading" constant="20" id="3EW-09-tpC"/>
                             <constraint firstItem="zC7-75-abI" firstAttribute="trailing" secondItem="ost-wx-AIC" secondAttribute="trailing" constant="20" id="7FH-Mg-hCh"/>
@@ -280,11 +290,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="7Rg-qp-hz6">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="BKZ-pw-9Zc">
+                            <color key="tintColor" name="MukLabelColor"/>
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="vG9-JU-j3e" id="Jdg-ri-BPw"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="저장" id="7R1-3r-BLd">
+                            <color key="tintColor" name="MukLabelColor"/>
                             <connections>
                                 <action selector="saveButtonTapped:" destination="vG9-JU-j3e" id="bC9-yc-meV"/>
                             </connections>
@@ -305,9 +317,18 @@
             <objects>
                 <navigationController id="PxR-0V-eln" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" id="73r-aT-Wq0"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UvL-fU-K2B">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="UvL-fU-K2B">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="MukLabelColor"/>
+                        <color key="barTintColor" name="MukBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                            <color key="textColor" name="MukLabelColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="MukLabelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="V0P-4a-kWp" kind="relationship" relationship="rootViewController" id="kiC-ay-6hi"/>
@@ -317,14 +338,14 @@
             </objects>
             <point key="canvasLocation" x="-121.37404580152672" y="-28.169014084507044"/>
         </scene>
-        <!--모아보기-->
+        <!--Collection View Controller-->
         <scene sceneID="0ib-KJ-e7M">
             <objects>
                 <collectionViewController id="lft-KT-BFv" customClass="CollectionViewController" customModule="MukDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mlV-ei-r7L">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MukBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="V7Z-6Q-jgt">
                             <size key="itemSize" width="130" height="130"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -339,7 +360,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gh3-Ew-6dw">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gh3-Ew-6dw">
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                         </imageView>
                                     </subviews>
@@ -359,9 +380,10 @@
                         <connections>
                             <outlet property="dataSource" destination="lft-KT-BFv" id="PAR-0e-MYD"/>
                             <outlet property="delegate" destination="lft-KT-BFv" id="d5G-gX-HZa"/>
+                            <outlet property="prefetchDataSource" destination="lft-KT-BFv" id="xxw-lf-Kaz"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="모아보기" id="wPl-9S-sK2"/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="wPl-9S-sK2"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j23-jH-e8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -375,6 +397,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NWP-0d-zi0">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="MukBackgroundColor"/>
+                        <color key="tintColor" name="MukBackgroundColor"/>
+                        <color key="barTintColor" name="MukBackgroundColor"/>
+                        <color key="selectedImageTintColor" name="MukLabelColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="PxR-0V-eln" kind="relationship" relationship="viewControllers" id="Zdt-LF-vja"/>
@@ -393,7 +419,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="igc-CZ-R3v">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MukBackgroundColor"/>
+                        <color key="tintColor" name="MukLabelColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="versionCell" textLabel="f9J-kl-AMR" detailTextLabel="vsf-q4-cO4" imageView="V8q-pP-JTB" style="IBUITableViewCellStyleValue1" id="PQ0-Df-z8s">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -406,7 +433,7 @@
                                             <rect key="frame" x="59" y="12.000000000000002" width="67" height="21.666666666666668"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" name="MukLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="gearshape" catalog="system" id="V8q-pP-JTB">
@@ -417,12 +444,13 @@
                                             <rect key="frame" x="350.33333333333331" y="18" width="22.666666666666668" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                            <color key="textColor" name="MukLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="MukBackgroundColor"/>
+                                <color key="tintColor" name="MukLabelColor"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="devCell" textLabel="Udl-Uy-avj" imageView="Fah-v7-SLV" style="IBUITableViewCellStyleDefault" id="Pxd-aa-E9D">
                                 <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="43.666667938232422"/>
@@ -435,7 +463,7 @@
                                             <rect key="frame" x="59" y="0.0" width="282" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" name="MukLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="person" catalog="system" id="Fah-v7-SLV">
@@ -444,7 +472,8 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="MukBackgroundColor"/>
+                                <color key="tintColor" name="MukLabelColor"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="darkModeCell" textLabel="qk4-bF-3fn" imageView="kn6-DI-420" style="IBUITableViewCellStyleDefault" id="SjY-NW-YD4">
                                 <rect key="frame" x="0.0" y="137.33333587646484" width="393" height="43.666667938232422"/>
@@ -457,7 +486,7 @@
                                             <rect key="frame" x="59" y="0.0" width="314" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" name="MukLabelColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="moon" catalog="system" id="kn6-DI-420">
@@ -466,7 +495,8 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="MukBackgroundColor"/>
+                                <color key="tintColor" name="MukLabelColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -488,6 +518,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pUA-8t-yp4">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="MukBackgroundColor"/>
+                        <color key="tintColor" name="MukLabelColor"/>
+                        <color key="barTintColor" name="MukBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="MukLabelColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="MukLabelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="mV1-4K-jZs" kind="relationship" relationship="rootViewController" id="eTF-eX-ZaQ"/>
@@ -505,6 +544,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j3z-lE-Nnh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="MukLabelColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -524,6 +564,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UrQ-CB-MMG">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="MukBackgroundColor"/>
+                        <color key="tintColor" name="MukLabelColor"/>
+                        <color key="barTintColor" name="MukBackgroundColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="MukLabelColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="MukLabelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -544,12 +593,15 @@
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="moon" catalog="system" width="128" height="123"/>
-        <image name="pencil.line" catalog="system" width="128" height="98"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="98"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="MukBackgroundColor">
+            <color red="0.96308928729999999" green="0.94383996729999997" blue="0.92047262190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MukLabelColor">
+            <color red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -48,7 +48,7 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
             DataManager.shared.saveContext()
             NotificationCenter.default.post(name: ComposeViewController.diaryDidChanged, object: nil)
         } else { // 새 일기 쓰기 모드
-            
+
             DataManager.shared.addNewDiary(diaryPhoto: diaryPhoto, diaryTitle: diaryTitle, diaryContent: diaryContent)
             NotificationCenter.default.post(name: ComposeViewController.newDiaryDidInsert, object: nil)
         }
