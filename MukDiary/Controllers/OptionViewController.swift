@@ -21,6 +21,7 @@ class OptionViewController: UITableViewController {
     
     var darkModeSwitch: UISwitch = {
         var modeSwitch = UISwitch()
+        modeSwitch.onTintColor = .darkGray
         modeSwitch.addTarget(nil, action: #selector(modeSwitchTapped), for: .touchUpInside)
         return modeSwitch
     }()

@@ -61,14 +61,14 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         
         if let diary = editTarget {
-            navigationItem.title = "일기 편집"
+            navigationItem.title = "Edit Diary"
             titleTextView.text = diary.title
             if let diaryPhoto = diary.photo {
                 photoView.image = UIImage(data: diaryPhoto)
             }
             contentTextView.text = diary.content
         } else {
-            navigationItem.title = "새 일기"
+            navigationItem.title = "New Diary"
             titleTextView.placeholder = "일기의 제목을 입력해주세요!"
             contentTextView.placeholder = "누구와 무엇을 먹었나요? :)"
             titleTextView.text = ""

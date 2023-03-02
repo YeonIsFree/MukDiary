@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "black-icon-messages-app-store-1024x768.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icon-messages-app-store-1024x768.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
