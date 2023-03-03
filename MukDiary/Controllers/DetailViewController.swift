@@ -11,23 +11,9 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var diaryTableView: UITableView!
     
-    // 이전 화면에서 넘어온 Diary 객체를 이 변수에 저장한다.
     var diary: Diary?
     
-    @IBAction func removeButtonTapped(_ sender: Any) {
-        
-        let alert = UIAlertController(title: "삭제 확인", message: "일기를 삭제할까요?", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "삭제", style: .destructive) {
-            [weak self] (action) in DataManager.shared.deleteDiary(self?.diary)
-            self?.navigationController?.popViewController(animated: true)
-        }
-        alert.addAction(okAction)
-        
-        let cancelAction = UIAlertAction(title: "취소", style: .cancel)
-        alert.addAction(cancelAction)
-        
-        present(alert, animated: true)
-    }
+    var tableToken: NSObjectProtocol?
     
     let formatter: DateFormatter = {
         let f = DateFormatter()
@@ -36,25 +22,35 @@ class DetailViewController: UIViewController {
         return f
     }()
     
-    // 수정 화면으로 데이터 넘겨주는 부분
+    @IBAction func removeButtonTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "삭제 확인", message: "일기를 삭제할까요?", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "삭제", style: .destructive) { [weak self] (action) in DataManager.shared.deleteDiary(self?.diary)
+            self?.navigationController?.popViewController(animated: true)
+            }
+        alert.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination.children.first as? ComposeViewController {
             vc.editTarget = diary
         }
     }
     
-    var token: NSObjectProtocol?
-    
     deinit {
-        if let token = token {
-            NotificationCenter.default.removeObserver(token)
+        if let tableToken = tableToken {
+            NotificationCenter.default.removeObserver(tableToken)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        token = NotificationCenter.default.addObserver(forName: ComposeViewController.diaryDidChanged, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in self?.diaryTableView.reloadData()})
+        tableToken = NotificationCenter.default.addObserver(forName: ComposeViewController.diaryDidChanged, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in self?.diaryTableView.reloadData()})
 
     }
     
@@ -91,6 +87,4 @@ extension DetailViewController: UITableViewDataSource {
             fatalError()
         }
     }
-    
-    
 }

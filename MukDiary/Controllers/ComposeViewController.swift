@@ -23,14 +23,14 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let diaryPhoto = photoView.image?.jpegData(compressionQuality: 1.0), photoView.image != UIImage(systemName: "photo.on.rectangle.angled")
+            else {
+            alert(message: "사진을 선택하세요")
+            return
+        }
     
         guard let diaryTitle = titleTextView.text, diaryTitle.count > 0 else {
             alert(message: "제목을 입력하세요")
-            return
-        }
-        
-        guard let diaryPhoto = photoView.image?.jpegData(compressionQuality: 1.0) else {
-            alert(message: "사진을 선택하세요")
             return
         }
         
@@ -39,7 +39,7 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
             return
         }
         
-        // 기존 일기 편집 모드
+                // 기존 일기 편집 모드
         if let target = editTarget {
             target.title = diaryTitle
             target.photo = diaryPhoto
@@ -48,7 +48,6 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
             DataManager.shared.saveContext()
             NotificationCenter.default.post(name: ComposeViewController.diaryDidChanged, object: nil)
         } else { // 새 일기 쓰기 모드
-
             DataManager.shared.addNewDiary(diaryPhoto: diaryPhoto, diaryTitle: diaryTitle, diaryContent: diaryContent)
             NotificationCenter.default.post(name: ComposeViewController.newDiaryDidInsert, object: nil)
         }
@@ -56,10 +55,8 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
         dismiss(animated: true)
         
     }
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    
+    func makeDiaryContent() {
         if let diary = editTarget {
             navigationItem.title = "Edit Diary"
             titleTextView.text = diary.title
@@ -71,17 +68,17 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
             navigationItem.title = "New Diary"
             titleTextView.placeholder = "일기의 제목을 입력해주세요!"
             contentTextView.placeholder = "누구와 무엇을 먹었나요? :)"
+            photoView.image = UIImage(systemName: "photo.on.rectangle.angled")
             titleTextView.text = ""
             contentTextView.text = ""
         }
-        
+    }
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        makeDiaryContent()
     }
 
-}
-
-extension ComposeViewController {
-    static let newDiaryDidInsert = Notification.Name(rawValue: "newDiaryDidInsert")
-    static let diaryDidChanged = Notification.Name(rawValue: "diaryDidChanged")
 }
 
 // MARK: - 사진 업로드
@@ -108,4 +105,11 @@ extension ComposeViewController: UIImagePickerControllerDelegate {
             }
         }
     
+}
+
+// MARK: - Add, Edit Notification
+
+extension ComposeViewController {
+    static let newDiaryDidInsert = Notification.Name(rawValue: "newDiaryDidInsert")
+    static let diaryDidChanged = Notification.Name(rawValue: "diaryDidChanged")
 }

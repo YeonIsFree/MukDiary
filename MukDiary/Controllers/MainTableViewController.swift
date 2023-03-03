@@ -20,7 +20,10 @@ class MainTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+//        DispatchQueue.main.async {
+//            DataManager.shared.fetchDiary()
+//            self.tableView.reloadData()
+//        }
         DataManager.shared.fetchDiary()
         tableView.reloadData()
     }
@@ -34,7 +37,6 @@ class MainTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
             if let vc = segue.destination as? DetailViewController {
                 vc.diary = DataManager.shared.diaryList[indexPath.row]
@@ -55,13 +57,10 @@ class MainTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return DataManager.shared.diaryList.count
-//        return DataManager.shared.diaryList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
         
         let target = DataManager.shared.diaryList[indexPath.row]

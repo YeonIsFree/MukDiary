@@ -11,9 +11,7 @@ import UIKit
 
 class DataManager {
     static let shared = DataManager()
-    private init() {
-        
-    }
+    private init() { }
     
     var mainContext: NSManagedObjectContext {
         return persistentContainer.viewContext
@@ -25,7 +23,6 @@ class DataManager {
         let request: NSFetchRequest<Diary> = Diary.fetchRequest()
         let sortByDateDesc = NSSortDescriptor(key: "insertDate", ascending: false)
         request.sortDescriptors = [sortByDateDesc]
-        
         do {
             diaryList = try mainContext.fetch(request)
         } catch {
@@ -39,7 +36,6 @@ class DataManager {
         newDiary.title = diaryTitle
         newDiary.insertDate = Date()
         newDiary.content = diaryContent
-        
         diaryList.insert(newDiary, at: 0)
         saveContext()
     }
