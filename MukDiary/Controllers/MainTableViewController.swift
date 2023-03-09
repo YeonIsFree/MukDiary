@@ -17,13 +17,9 @@ class MainTableViewController: UITableViewController {
         
         return f
     }()
-    
+ 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        DispatchQueue.main.async {
-//            DataManager.shared.fetchDiary()
-//            self.tableView.reloadData()
-//        }
         DataManager.shared.fetchDiary()
         tableView.reloadData()
     }

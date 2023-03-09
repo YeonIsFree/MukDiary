@@ -9,6 +9,8 @@ import UIKit
 
 class CollectionViewController: UICollectionViewController {
     
+    var removeToken: NSObjectProtocol?
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UICollectionViewCell, let indexPath = collectionView.indexPath(for: cell) {
             if let vc = segue.destination as? DetailViewController {
@@ -19,11 +21,13 @@ class CollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.collectionView.reloadData()
+        DataManager.shared.fetchDiary()
+        collectionView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.reloadData()
     }
     
     // MARK: - UICollectionViewDataSource

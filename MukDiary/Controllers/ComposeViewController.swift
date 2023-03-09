@@ -7,10 +7,14 @@
 
 import UIKit
 import UITextView_Placeholder
+import PhotosUI
 
 class ComposeViewController: UIViewController, UINavigationControllerDelegate {
-    
     var editTarget: Diary?
+    
+    var imagePicker = UIImagePickerController()
+    
+    var defualtImg = UIImage(systemName: "photo.on.rectangle.angled")
     
     @IBOutlet weak var photoView: UIImageView!
     
@@ -23,7 +27,7 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let diaryPhoto = photoView.image?.jpegData(compressionQuality: 1.0), photoView.image != UIImage(systemName: "photo.on.rectangle.angled")
+        guard let diaryPhoto = photoView.image?.jpegData(compressionQuality: 1.0), photoView.image != defualtImg
             else {
             alert(message: "사진을 선택하세요")
             return
@@ -44,7 +48,6 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
             target.title = diaryTitle
             target.photo = diaryPhoto
             target.content = diaryContent
-            
             DataManager.shared.saveContext()
             NotificationCenter.default.post(name: ComposeViewController.diaryDidChanged, object: nil)
         } else { // 새 일기 쓰기 모드
@@ -68,9 +71,36 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
             navigationItem.title = "New Diary"
             titleTextView.placeholder = "일기의 제목을 입력해주세요!"
             contentTextView.placeholder = "누구와 무엇을 먹었나요? :)"
-            photoView.image = UIImage(systemName: "photo.on.rectangle.angled")
+            photoView.image = defualtImg
             titleTextView.text = ""
             contentTextView.text = ""
+        }
+    }
+    
+    func checkAuthStatus() {
+        let authStatus = PHPhotoLibrary.authorizationStatus()
+        if authStatus == .authorized || authStatus == .limited {
+            DispatchQueue.main.async {
+                self.openImagePicker()
+            }
+        } else if authStatus == .denied {
+            DispatchQueue.main.async {
+                self.authAlert()
+            }
+            
+        } else if authStatus == .notDetermined {
+            PHPhotoLibrary.requestAuthorization { status in
+                self.checkAuthStatus()
+            }
+        }
+    }
+    
+    func openImagePicker() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = false
+            present(imagePicker, animated: true, completion: nil)
         }
     }
    
@@ -78,20 +108,17 @@ class ComposeViewController: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         makeDiaryContent()
     }
-
 }
 
-// MARK: - 사진 업로드
+// MARK: - Image Picker
 extension ComposeViewController: UIImagePickerControllerDelegate {
     
     @IBAction func pickButtonTapped(_ sender: UIButton) {
-        let picker = UIImagePickerController()
-        picker.sourceType = .photoLibrary
-        picker.allowsEditing = true
-        
-        picker.delegate = self
-        
-        self.present(picker, animated: true)
+        if photoView.image != defualtImg {
+            openImagePicker()
+        } else {
+            checkAuthStatus()
+        }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -100,7 +127,7 @@ extension ComposeViewController: UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             picker.dismiss(animated: false) { () in
-                let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+                let img = info[.originalImage] as? UIImage
                 self.photoView.image = img
             }
         }

@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     var diary: Diary?
     
     var tableToken: NSObjectProtocol?
-    
+
     let formatter: DateFormatter = {
         let f = DateFormatter()
         f.dateStyle = .long

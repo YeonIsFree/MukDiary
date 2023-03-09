@@ -381,7 +381,7 @@
                         <connections>
                             <outlet property="dataSource" destination="lft-KT-BFv" id="PAR-0e-MYD"/>
                             <outlet property="delegate" destination="lft-KT-BFv" id="d5G-gX-HZa"/>
-                            <outlet property="prefetchDataSource" destination="lft-KT-BFv" id="xxw-lf-Kaz"/>
+                            <outlet property="prefetchDataSource" destination="lft-KT-BFv" id="uGA-pe-rQx"/>
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Collection" leftItemsSupplementBackButton="YES" id="wPl-9S-sK2"/>
