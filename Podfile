@@ -8,5 +8,6 @@ target 'MukDiary' do
   # Pods for MukDiary
 
 pod 'UITextView+Placeholder'
+pod 'IQKeyboardManagerSwift'
 
 end
