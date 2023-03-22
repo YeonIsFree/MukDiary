@@ -117,29 +117,29 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="MukBackgroundColor"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="350" translatesAutoresizingMaskIntoConstraints="NO" id="DOu-mC-zr6" customClass="PhotoTableViewCell" customModule="MukDiary" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="350" id="DOu-mC-zr6" customClass="PhotoTableViewCell" customModule="MukDiary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="393" height="350"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DOu-mC-zr6" id="Jhj-Ca-nCb">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DOu-mC-zr6" translatesAutoresizingMaskIntoConstraints="NO" id="Jhj-Ca-nCb">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
-                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wp2-VR-ruH">
-                                                    <rect key="frame" x="46.666666666666657" y="11" width="300" height="328"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="300" id="A65-9a-UPz"/>
-                                                        <constraint firstAttribute="width" constant="300" id="GyM-wF-Tnv"/>
-                                                    </constraints>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wp2-VR-ruH">
+                                                    <rect key="frame" x="20" y="6" width="353" height="339"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="wp2-VR-ruH" firstAttribute="centerX" secondItem="Jhj-Ca-nCb" secondAttribute="centerX" id="XJv-1i-RCT"/>
-                                                <constraint firstItem="wp2-VR-ruH" firstAttribute="top" secondItem="Jhj-Ca-nCb" secondAttribute="topMargin" id="lh2-Di-X7x"/>
-                                                <constraint firstItem="wp2-VR-ruH" firstAttribute="centerY" secondItem="Jhj-Ca-nCb" secondAttribute="centerY" id="pgg-RK-QfB"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="wp2-VR-ruH" secondAttribute="bottom" id="q2H-kf-aQn"/>
+                                                <constraint firstAttribute="height" constant="350" id="2yp-D3-t7d"/>
+                                                <constraint firstAttribute="width" constant="393" id="RBe-SD-PWs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="MukBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Jhj-Ca-nCb" firstAttribute="top" secondItem="DOu-mC-zr6" secondAttribute="top" id="2S4-oX-pDv"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jhj-Ca-nCb" secondAttribute="trailing" id="8g6-l2-ouO"/>
+                                            <constraint firstAttribute="bottom" secondItem="Jhj-Ca-nCb" secondAttribute="bottom" id="GNT-XL-HRT"/>
+                                            <constraint firstItem="Jhj-Ca-nCb" firstAttribute="leading" secondItem="DOu-mC-zr6" secondAttribute="leading" id="qiw-7W-3Hj"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="photoImageView" destination="wp2-VR-ruH" id="rv7-Gt-4hg"/>
                                         </connections>
@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1p-6a-sbt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2534" y="417"/>
+            <point key="canvasLocation" x="2533.5877862595421" y="416.90140845070425"/>
         </scene>
         <!--New Diary-->
         <scene sceneID="3ta-pG-jus">
@@ -339,60 +339,6 @@
             </objects>
             <point key="canvasLocation" x="-121.37404580152672" y="-28.169014084507044"/>
         </scene>
-        <!--Collection-->
-        <scene sceneID="0ib-KJ-e7M">
-            <objects>
-                <collectionViewController id="lft-KT-BFv" customClass="CollectionViewController" customModule="MukDiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mlV-ei-r7L">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="MukBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="V7Z-6Q-jgt">
-                            <size key="itemSize" width="130" height="130"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="vSJ-z3-wIh" customClass="PhotoCollectionViewCell" customModule="MukDiary" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TWb-gE-Gfh">
-                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gh3-Ew-6dw">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
-                                        </imageView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Gh3-Ew-6dw" firstAttribute="top" secondItem="TWb-gE-Gfh" secondAttribute="top" id="7Vl-9b-HcD"/>
-                                        <constraint firstItem="Gh3-Ew-6dw" firstAttribute="leading" secondItem="TWb-gE-Gfh" secondAttribute="leading" id="Bvb-az-B6F"/>
-                                        <constraint firstAttribute="trailing" secondItem="Gh3-Ew-6dw" secondAttribute="trailing" id="Jmm-hh-rWY"/>
-                                        <constraint firstAttribute="bottom" secondItem="Gh3-Ew-6dw" secondAttribute="bottom" id="xIo-Vq-HoF"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <connections>
-                                    <outlet property="collectionImageView" destination="Gh3-Ew-6dw" id="7H4-RY-dfp"/>
-                                    <segue destination="wjK-YW-2G6" kind="show" identifier="detailViewSegue" id="rw3-dW-8og"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="lft-KT-BFv" id="PAR-0e-MYD"/>
-                            <outlet property="delegate" destination="lft-KT-BFv" id="d5G-gX-HZa"/>
-                            <outlet property="prefetchDataSource" destination="lft-KT-BFv" id="uGA-pe-rQx"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Collection" leftItemsSupplementBackButton="YES" id="wPl-9S-sK2"/>
-                    <connections>
-                        <outlet property="collectionView" destination="mlV-ei-r7L" id="To6-ve-0GL"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j23-jH-e8P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="797.70992366412213" y="714.78873239436621"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mZP-ne-zQt">
             <objects>
@@ -444,7 +390,7 @@
                                             <rect key="frame" x="21.666666666666668" y="11.666666666666664" width="20.666666666666664" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="v1.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vsf-q4-cO4">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="v1.2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vsf-q4-cO4">
                                             <rect key="frame" x="350.33333333333331" y="18" width="22.666666666666668" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
@@ -513,6 +459,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06z-4f-CtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-121.37404580152672" y="1460.5633802816901"/>
+        </scene>
+        <!--Collection-->
+        <scene sceneID="D0P-5z-U65">
+            <objects>
+                <viewController id="l5l-dJ-fRp" customClass="CollectionViewController" customModule="MukDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xwQ-7E-gvv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" name="MukBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4A5-gI-CRZ">
+                            <size key="itemSize" width="120" height="120"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="Y5g-qI-HgW" customClass="PhotoCollectionViewCell" customModule="MukDiary" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HlV-2R-tPR">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1DG-8h-xki">
+                                            <rect key="frame" x="5" y="5" width="118" height="118"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="1DG-8h-xki" secondAttribute="bottom" constant="5" id="1X6-Z7-iO7"/>
+                                        <constraint firstItem="1DG-8h-xki" firstAttribute="leading" secondItem="HlV-2R-tPR" secondAttribute="leading" constant="5" id="gej-eb-SGD"/>
+                                        <constraint firstItem="1DG-8h-xki" firstAttribute="top" secondItem="HlV-2R-tPR" secondAttribute="top" constant="5" id="lAF-Gn-Aqp"/>
+                                        <constraint firstAttribute="trailing" secondItem="1DG-8h-xki" secondAttribute="trailing" constant="5" id="yAT-4y-DhZ"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="128" height="128"/>
+                                <connections>
+                                    <outlet property="collectionImageView" destination="1DG-8h-xki" id="gNm-nE-KxJ"/>
+                                    <segue destination="wjK-YW-2G6" kind="show" id="oeO-Gr-Zvo"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Collection" id="lZ4-hF-2bP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rb4-bX-c4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852.67175572519079" y="714.78873239436621"/>
         </scene>
         <!--Option-->
         <scene sceneID="953-f2-cd2">
@@ -586,7 +579,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="lft-KT-BFv" kind="relationship" relationship="rootViewController" id="ahs-1d-eno"/>
+                        <segue destination="l5l-dJ-fRp" kind="relationship" relationship="rootViewController" id="qDI-VS-ScM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6a-3a-FEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -596,7 +589,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Ioa-Tn-LLe"/>
-        <segue reference="rw3-dW-8og"/>
+        <segue reference="oeO-Gr-Zvo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circle.grid.3x3" catalog="system" width="128" height="110"/>
@@ -606,10 +599,10 @@
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <namedColor name="MukBackgroundColor">
-            <color red="0.96299999952316284" green="0.9440000057220459" blue="0.92000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96470588235294119" green="0.94117647058823528" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MukLabelColor">
-            <color red="0.32899999618530273" green="0.32899999618530273" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
