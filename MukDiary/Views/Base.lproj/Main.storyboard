@@ -75,9 +75,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nHc-FK-N1h">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nHc-FK-N1h">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="MukBackgroundColor"/>
                                 <color key="tintColor" name="MukLabelColor"/>
                                 <prototypes>
@@ -117,35 +116,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="MukBackgroundColor"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="350" id="DOu-mC-zr6" customClass="PhotoTableViewCell" customModule="MukDiary" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="393" height="350"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DOu-mC-zr6" translatesAutoresizingMaskIntoConstraints="NO" id="Jhj-Ca-nCb">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wp2-VR-ruH">
-                                                    <rect key="frame" x="20" y="6" width="353" height="339"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="350" id="2yp-D3-t7d"/>
-                                                <constraint firstAttribute="width" constant="393" id="RBe-SD-PWs"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" name="MukBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="Jhj-Ca-nCb" firstAttribute="top" secondItem="DOu-mC-zr6" secondAttribute="top" id="2S4-oX-pDv"/>
-                                            <constraint firstAttribute="trailing" secondItem="Jhj-Ca-nCb" secondAttribute="trailing" id="8g6-l2-ouO"/>
-                                            <constraint firstAttribute="bottom" secondItem="Jhj-Ca-nCb" secondAttribute="bottom" id="GNT-XL-HRT"/>
-                                            <constraint firstItem="Jhj-Ca-nCb" firstAttribute="leading" secondItem="DOu-mC-zr6" secondAttribute="leading" id="qiw-7W-3Hj"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="photoImageView" destination="wp2-VR-ruH" id="rv7-Gt-4hg"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="contentCell" textLabel="JD8-j3-yA6" style="IBUITableViewCellStyleDefault" id="Rjc-Mp-MVg">
-                                        <rect key="frame" x="0.0" y="470" width="393" height="44"/>
+                                        <rect key="frame" x="0.0" y="120" width="393" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rjc-Mp-MVg" id="CQH-ME-aEg">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
@@ -162,6 +134,33 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="MukBackgroundColor"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" id="KhN-lZ-Fhi" customClass="PhotoTableViewCell" customModule="MukDiary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="164" width="393" height="370"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KhN-lZ-Fhi" id="f86-A2-yDG">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="370"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="boY-E1-cth">
+                                                    <rect key="frame" x="21.666666666666657" y="10" width="350" height="350"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="350" id="6PE-8c-uEV"/>
+                                                        <constraint firstAttribute="width" constant="350" id="pTS-gv-S7u"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="boY-E1-cth" secondAttribute="bottom" constant="10" id="D2p-r4-bco"/>
+                                                <constraint firstItem="boY-E1-cth" firstAttribute="centerY" secondItem="f86-A2-yDG" secondAttribute="centerY" id="H9o-kF-TrL"/>
+                                                <constraint firstItem="boY-E1-cth" firstAttribute="top" secondItem="f86-A2-yDG" secondAttribute="top" constant="10" id="Igd-rS-4VQ"/>
+                                                <constraint firstItem="boY-E1-cth" firstAttribute="centerX" secondItem="f86-A2-yDG" secondAttribute="centerX" id="LIW-bt-d1Z"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="MukBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="boY-E1-cth" id="Cjr-GC-5bV"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="wjK-YW-2G6" id="zOU-ty-GSc"/>
@@ -171,6 +170,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lE8-vm-Qdo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nHc-FK-N1h" firstAttribute="top" secondItem="6Px-Pt-3A1" secondAttribute="top" id="6UZ-sw-okz"/>
+                            <constraint firstItem="nHc-FK-N1h" firstAttribute="leading" secondItem="lE8-vm-Qdo" secondAttribute="leading" id="GiI-Pv-I6b"/>
+                            <constraint firstItem="nHc-FK-N1h" firstAttribute="trailing" secondItem="lE8-vm-Qdo" secondAttribute="trailing" id="HJA-gJ-adH"/>
+                            <constraint firstAttribute="bottom" secondItem="nHc-FK-N1h" secondAttribute="bottom" id="ff7-nk-kOR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="VNB-gI-09d">
                         <rightBarButtonItems>
@@ -366,7 +371,7 @@
         <scene sceneID="2PO-7J-VkF">
             <objects>
                 <tableViewController id="mV1-4K-jZs" customClass="OptionViewController" customModule="MukDiary" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="igc-CZ-R3v">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="igc-CZ-R3v">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="MukBackgroundColor"/>

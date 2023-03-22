@@ -75,7 +75,8 @@ extension DetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoTableViewCell
             
             if let img = diary?.photo {
-                cell.photoImageView.image = UIImage(data: img)
+                let image = UIImage(data: img)
+                cell.photoImageView.image = image
             }
             
             return cell
