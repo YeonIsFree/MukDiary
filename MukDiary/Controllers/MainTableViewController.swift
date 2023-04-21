@@ -17,10 +17,19 @@ class MainTableViewController: UITableViewController {
         
         return f
     }()
+    
+    @IBOutlet weak var emptyCheckLabel: UILabel!
  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DataManager.shared.fetchDiary()
+        
+        if DataManager.shared.diaryList.isEmpty {
+            emptyCheckLabel.isHidden = false
+        } else {
+            emptyCheckLabel.isHidden = true
+        }
+       
         tableView.reloadData()
     }
     
@@ -42,7 +51,7 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         token = NotificationCenter.default.addObserver(forName: ComposeViewController.newDiaryDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in
             self?.tableView.reloadData()
         }
