@@ -24,6 +24,7 @@ class MainTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         DataManager.shared.fetchDiary()
         
+        // 데이터 없을 때 표시하는 문구
         if DataManager.shared.diaryList.isEmpty {
             emptyCheckLabel.isHidden = false
         } else {
@@ -75,6 +76,24 @@ class MainTableViewController: UITableViewController {
         cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
         
         return cell
+    }
+    
+    // Swipe Delete
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let target = DataManager.shared.diaryList[indexPath.row]
+            DataManager.shared.deleteDiary(target)
+            DataManager.shared.diaryList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 
     
