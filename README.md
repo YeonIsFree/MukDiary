@@ -1,6 +1,6 @@
 # 먹다이어리 - MukDiary
-심플한 감성 푸드 다이어리 </br>
-"오늘 당신은 무얼 드셨나요?"
+> 심플한 감성 푸드 다이어리 </br>
+"오늘 당신은 무얼 드셨나요?" </br>
 
 [![MukDiary](https://user-images.githubusercontent.com/108605997/214177110-4e5b4891-a038-436c-99a9-19c8e7c10056.png)](https://apps.apple.com/kr/app/mukdiary-%EB%A8%B9%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC/id6446193290)
 
